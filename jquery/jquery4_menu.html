@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style media="screen">
+      .menu{
+        border: solid 1px #dddddd;
+        text-align: center;
+        width: 100px;
+        float: left;
+        padding: 5px;
+        margin-right: -1px;
+        cursor: pointer;
+      }
+      .menu_on{
+        background-color: #dddddd;
+        font-weight: bold;
+      }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="   crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $(".menu").mouseover(function(){
+          $(this).addClass("menu_on");  //class를 붙여주는 jquery 메소드
+        });
+        $(".menu").mouseout(function(){
+          $(this).removeClass("menu_on"); //class를 없애주는 jquery 메소드
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="menu">Menu1</div>
+    <div class="menu">Menu2</div>
+    <div class="menu">Menu3</div>
+    <div class="menu">Menu4</div>
+
+  </body>
+</html>
